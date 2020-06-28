@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ContinuationBug.gd" type="Script" id=1]
+[ext_resource path="res://Spinner.gd" type="Script" id=2]
+
+[node name="ContinuationBug" type="Control"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExpensiveFunctionBtn" type="Button" parent="."]
+margin_left = 37.8635
+margin_top = 37.6205
+margin_right = 258.863
+margin_bottom = 72.6205
+shortcut_in_tooltip = false
+text = "Run Expensive Function"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AmortizeExpensiveFunctionBtn" type="Button" parent="."]
+margin_left = 37.8635
+margin_top = 102.773
+margin_right = 258.863
+margin_bottom = 137.773
+shortcut_in_tooltip = false
+text = "Amortize Expensive Function"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OutputLabel" type="Label" parent="."]
+margin_top = 180.0
+margin_right = 300.0
+margin_bottom = 194.0
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Spinner" type="ColorRect" parent="."]
+margin_top = 240.0
+margin_right = 300.0
+margin_bottom = 280.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ExpensiveFunctionBtn" to="." method="_on_ExpensiveFunctionBtn_pressed"]
+[connection signal="pressed" from="AmortizeExpensiveFunctionBtn" to="." method="_on_AmortizeExpensiveFunctionBtn_pressed"]
